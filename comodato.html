@@ -38,7 +38,7 @@
 						Dashboard
 					</a>
 					<a href="./magazzino.html" class="btn btn-primary text-start d-block mb-2">
-						Magazzino		
+						Magazzino
 					</a>
 					<a href="./comodato.html" class="btn btn-primary text-start d-block mb-2">
 						Comodato
@@ -55,23 +55,22 @@
 			<div class="col-12 col-sm-9 col-lg-10 d-flex py-3">
 				<div class="flex-fill rounded-2 p-3 bg-white">
 
-					<div class=" d-flex justify-content-end"><button type="button" class="btn btn-primary"
-							data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+					<div class=" d-flex justify-content-end"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop">
 							Aggiungi
 						</button>
 
 					</div>
-					<div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
-						data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+						tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
 									<h1 class="modal-title fs-5" id="staticBackdropLabel">Aggiunta di un comodato</h1>
-									<button type="button" class="btn-close" data-bs-dismiss="modal"
-										aria-label="Close"></button>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
-									<form>
+									<form action="http://192.168.0.188:1880" method="post" id="addComodato">
 										<div class="mb-3">
 											<select class="form-select" aria-label="Default select example">
 												<option selected>Studente</option>
@@ -99,28 +98,26 @@
 											</select>
 											<div id="studentsHelp" class="form-text">Seleziona il seriale.</div>
 											<div class="d-flex">
-												<form>
-													<div class="mb-3 mt-3 flex-fill">
-														<input type="date" class="form-control">
-														<div class="form-text">Data di inizio.</div>
-													</div>
-													<div class="mb-3 mt-3 ms-2 flex-fill">
-														<input type="date" class="form-control">
-														<div class="form-text">Data di fine.</div>
-													</div>
-												</form>
+												<div class="mb-3 mt-3 flex-fill">
+													<input type="date" class="form-control">
+													<div class="form-text">Data di inizio.</div>
+												</div>
+												<div class="mb-3 mt-3 ms-2 flex-fill">
+													<input type="date" class="form-control">
+													<div class="form-text">Data di fine.</div>
+												</div>
 											</div>
 											<div class="form-floating">
-												<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+												<textarea class="form-control" placeholder="Leave a comment here"
+													id="floatingTextarea"></textarea>
 												<label for="floatingTextarea">Note</label>
-											  </div>
+											</div>
 										</div>
 									</form>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-bs-dismiss="modal">Chiudi</button>
-									<button type="button" class="btn btn-primary">Conferma aggiunta</button>
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+									<button type="submit" form="addComodato" class="btn btn-primary">Conferma aggiunta</button>
 								</div>
 							</div>
 						</div>
