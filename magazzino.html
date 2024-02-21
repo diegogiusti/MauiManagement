@@ -70,7 +70,7 @@
 										aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
-									<form id="aggiunta" method="post">
+									<form action="http://192.168.0.188:1880" method="post" id="addOggetto">
 										<div class="mb-3">
 											<label for="IDInventario" class="form-label">ID Inventario</label>
 											<input type="number" class="form-control" id="IDInventario"
@@ -101,14 +101,12 @@
 												<option value="2">234</option>
 												<option value="3">234</option>
 											</select>
-
 										</div>
 									</form>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-bs-dismiss="modal">Chiudi</button>
-									<button type="submit" form="aggiunta" class="btn btn-primary">Conferma aggiunta</button>
+									<button type="button" class="btn btn-secondary"	data-bs-dismiss="modal">Chiudi</button>
+									<button type="submit" form="addOggetto" class="btn btn-primary">Conferma aggiunta</button>
 								</div>
 							</div>
 						</div>
